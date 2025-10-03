@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Eternal White - Image Gallery</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    'orbitron': ['Orbitron', 'sans-serif']
+                }
+            }
+        }
+    }
+</script>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #101c22;
+        }
+        
+        /* Hamburger menu styles */
+        .menu-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .hamburger {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(16, 28, 34, 0.8);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hamburger div {
+            width: 24px;
+            height: 2px;
+            background-color: white;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .menu {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background-color: rgba(16, 28, 34, 0.9);
+            border-radius: 8px;
+            padding: 10px 0;
+            width: 200px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        
+        .menu.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .menu a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            transition: background-color 0.3s ease;
+        }
+        
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* When menu is active, transform hamburger to X */
+        .hamburger.active div:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .hamburger.active div:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active div:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+        
+        /* Image filter effects */
+        .gallery-image {
+            filter: grayscale(100%) blur(2px);
+            transition: filter 0.5s ease, transform 0.5s ease;
+        }
+        
+        .gallery-image:hover {
+            filter: grayscale(0%) blur(0px);
+        }
+    </style>
+</head>
+<body class="bg-background-dark font-display">
+
+<!-- Hamburger Menu -->
+<div class="menu-container">
+    <div class="hamburger" id="hamburger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="menu" id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="pages/trailer.html">Trailer</a>
+        <a href="pages/sinopsis.html">Sinopsis</a>
+        <a href="pages/fichatecnica.html">Ficha Técnica</a>
+    </div>
+</div>
+
+<!-- Title and Button Container -->
+<div class="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none">
+    <h1 class="text-4xl md:text-6xl lg:text-7xl font-orbitron font-bold text-white tracking-wider mb-8 text-center" style="text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);">THE ETERNAL WHITE</h1>
+    <a href="https://vimeo.com/ondemand/tew/" target="_blank" class="pointer-events-auto font-orbitron font-bold py-3 px-10 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg text-white" style="background: linear-gradient(135deg, #13a4ec 0%, #187bcd 100%); box-shadow: 0 0 15px rgba(19, 164, 236, 0.5); text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);">
+        <span>VER SERIE</span>
+    </a>
+</div>
+
+<div class="h-screen w-screen grid grid-cols-2 md:grid-cols-4 grid-rows-4 md:grid-rows-2">
+<div class="relative overflow-hidden group">
+<img alt="Futuristic icy landscape" class="gallery-image w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" src="img/imagenes eternal white/S_02.png"/>
+</div>
+<div class="relative overflow-hidden group">
+<img alt="Futuristic icy landscape" class="gallery-image w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" src="img/imagenes eternal white/S_03.png"/>
+</div>
+<div class="relative overflow-hidden group">
+<img alt="Futuristic icy landscape" class="gallery-image w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" src="img/imagenes eternal white/S_06.png"/>
+</div>
+<div class="relative overflow-hidden group">
+<img alt="Futuristic icy landscape" class="gallery-image w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" src="img/imagenes eternal white/The Eternal White_MARKET TRAILER_CHAPTER 1_CHAPTER 7.00_00_20_10.Still004.png"/>
+</div>
+<div class="relative overflow-hidden group">
+<img alt="Futuristic icy landscape" class="gallery-image w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" src="img/imagenes eternal white/The Eternal White_MARKET TRAILER_CHAPTER 1_CHAPTER 7.00_00_37_07.Still012.png"/>
+</div>
+<div class="relative overflow-hidden group">
+<img alt="Futuristic icy landscape" class="gallery-image w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" src="img/imagenes eternal white/The Eternal White_MARKET TRAILER_CHAPTER 1_CHAPTER 7.00_00_49_05.Still016.png"/>
+</div>
+<div class="relative overflow-hidden group">
+<img alt="Futuristic icy landscape" class="gallery-image w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" src="img/imagenes eternal white/The Eternal White_MARKET TRAILER_CHAPTER 1_CHAPTER 7.00_01_43_20.Still029.png"/>
+</div>
+<div class="relative overflow-hidden group">
+<img alt="Futuristic icy landscape" class="gallery-image w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" src="img/imagenes eternal white/The Eternal White_MARKET TRAILER_CHAPTER 1_CHAPTER 7.00_00_27_18.Still009.png"/>
+</div>
+</div>
+
+<!-- Footer with logo -->
+<div class="absolute bottom-0 left-0 right-0 flex justify-center items-center p-4 z-10">
+    <img src="img/subterranea.png" alt="Subterranea Logo" class="h-8 opacity-70 hover:opacity-100 transition-opacity duration-300" />
+</div>
+
+<script>
+    // Hamburger menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger-menu');
+        const menu = document.getElementById('menu');
+        
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+                hamburger.classList.remove('active');
+                menu.classList.remove('active');
+            }
+        });
+    });
+</script>
+</body></html>

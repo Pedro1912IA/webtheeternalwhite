@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Eternal White - Info</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13a4ec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .info-grid {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+    }
+    
+    /* Hamburger menu styles */
+    .menu-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    
+    .hamburger {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(16, 28, 34, 0.8);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      padding: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .hamburger div {
+      width: 24px;
+      height: 2px;
+      background-color: white;
+      margin: 3px 0;
+      transition: all 0.3s ease;
+    }
+    
+    .menu {
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: rgba(16, 28, 34, 0.9);
+      border-radius: 8px;
+      padding: 10px 0;
+      width: 200px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+    }
+    
+    .menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .menu a {
+      display: block;
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+      font-family: 'Space Grotesk', sans-serif;
+      transition: background-color 0.3s ease;
+    }
+    
+    .menu a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* When menu is active, transform hamburger to X */
+    .hamburger.active div:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active div:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger.active div:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white antialiased">
+
+<!-- Hamburger Menu -->
+<div class="menu-container">
+    <div class="hamburger" id="hamburger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="menu" id="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="trailer.html">Trailer</a>
+        <a href="sinopsis.html">Sinopsis</a>
+        <a href="fichatecnica.html">Ficha Técnica</a>
+    </div>
+</div>
+
+<div class="flex min-h-screen items-center justify-center p-4">
+<div class="w-full max-w-2xl rounded-xl bg-background-dark/50 dark:bg-background-light/5 backdrop-blur-lg border border-white/10 dark:border-white/5 shadow-2xl overflow-hidden">
+<div class="p-8 md:p-12">
+<header class="mb-8">
+<h1 class="text-4xl md:text-5xl font-bold tracking-tighter bg-gradient-to-r from-primary to-white/80 text-transparent bg-clip-text">Technical Sheet</h1>
+</header>
+<section class="space-y-8">
+<div>
+<h2 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Synopsis</h2>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">
+              In a distant future, humanity has spread across the stars, encountering diverse alien civilizations and uncovering ancient mysteries. The Eternal White follows the crew of the starship Odyssey as they navigate the complexities of interstellar politics, explore uncharted territories, and confront threats that could unravel the fabric of the galaxy.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-6">
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Cast</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">
+                  Anya Petrova as Captain Eva Rostova, Ben Carter as Dr. Aris Thorne, and Chloe Davis as Lieutenant Commander Kai.
+                </p>
+</div>
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Creators</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">
+                  Created by Elias Vance and Isabella Rossi, a cinematic journey through the cosmos.
+                </p>
+</div>
+</div>
+<div class="space-y-6">
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Release Date</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">
+                        Premiering on January 15, 2025.
+                    </p>
+</div>
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Streaming</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">
+                        Available exclusively on <span class="font-semibold text-white">StreamVerse</span>.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="bg-black/20 dark:bg-black/30 px-8 py-4">
+<div class="flex items-center justify-between">
+<p class="text-xs text-white/50 dark:text-white/40 uppercase tracking-widest">
+                A Galactic Odyssey
+            </p>
+<button class="rounded-full bg-primary text-white text-sm font-bold py-2 px-6 hover:bg-opacity-80 transition-colors duration-300">
+                Watch Trailer
+            </button>
+</div>
+</footer>
+</div>
+</div>
+
+<script>
+    // Hamburger menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger-menu');
+        const menu = document.getElementById('menu');
+        
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+                hamburger.classList.remove('active');
+                menu.classList.remove('active');
+            }
+        });
+    });
+</script>
+</body></html>

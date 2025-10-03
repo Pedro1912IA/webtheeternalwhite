@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Eternal White - Synopsis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#13a4ec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            display: ["Space Grotesk", "sans-serif"],
+            orbitron: ["Orbitron", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    .bg-overlay {
+      background-color: rgba(16, 28, 34, 0.7);
+    }
+    
+    /* Hamburger menu styles */
+    .menu-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    
+    .hamburger {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(16, 28, 34, 0.8);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      padding: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .hamburger div {
+      width: 24px;
+      height: 2px;
+      background-color: white;
+      margin: 3px 0;
+      transition: all 0.3s ease;
+    }
+    
+    .menu {
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: rgba(16, 28, 34, 0.9);
+      border-radius: 8px;
+      padding: 10px 0;
+      width: 200px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+    }
+    
+    .menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .menu a {
+      display: block;
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+      font-family: 'Space Grotesk', sans-serif;
+      transition: background-color 0.3s ease;
+    }
+    
+    .menu a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* When menu is active, transform hamburger to X */
+    .hamburger.active div:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active div:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger.active div:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+
+<!-- Hamburger Menu -->
+<div class="menu-container">
+    <div class="hamburger" id="hamburger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="menu" id="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="trailer.html">Trailer</a>
+        <a href="sinopsis.html">Sinopsis</a>
+        <a href="fichatecnica.html">Ficha Técnica</a>
+    </div>
+</div>
+
+<div class="relative flex h-screen w-full items-center justify-center bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxU9q6b8r91n8f3i_9C7_6B3yD_r_kC8VzC8U_m-mC5zJ-xK8qY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_xH9mY_-Z1D9u2xQ");'>
+<div class="absolute inset-0 bg-background-dark/70 dark:bg-background-dark/80"></div>
+<div class="relative z-10 flex flex-col items-start space-y-6 p-8 max-w-5xl mx-auto">
+<h1 class="text-6xl font-orbitron font-bold tracking-wider md:text-7xl">SINOPSIS</h1>
+<p class="text-lg text-white/80 text-left">
+  El silencio entre Ela y Jim es un recuerdo de la operación fallida de Kin, su hija, ahora incapaz de sentir emociones. En su viaje de regreso a Sandoz, el planeta blanco, la nave sufre un accidente y quedan varados. Para sobrevivir, el grupo debe cruzar el eterno y blanco desierto del planeta para llegar a Atis, evitando ser capturados por sus criaturas salvajes que reaccionan ante sus miedos, dolores y alegrías.
+      </p>
+</div>
+</div>
+
+<!-- Footer with logo -->
+<div class="absolute bottom-0 left-0 right-0 flex justify-center items-center p-4 z-10">
+    <img src="../img/subterranea.png" alt="Subterranea Logo" class="h-8 opacity-70 hover:opacity-100 transition-opacity duration-300" />
+</div>
+
+<script>
+    // Hamburger menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger-menu');
+        const menu = document.getElementById('menu');
+        
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+                hamburger.classList.remove('active');
+                menu.classList.remove('active');
+            }
+        });
+    });
+</script>
+</body></html>

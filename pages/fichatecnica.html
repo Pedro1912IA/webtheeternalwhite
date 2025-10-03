@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Eternal White - Info</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13a4ec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk"],
+            "orbitron": ["Orbitron", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .info-grid {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+    }
+    
+    /* Hamburger menu styles */
+    .menu-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    
+    .hamburger {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(16, 28, 34, 0.8);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      padding: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .hamburger div {
+      width: 24px;
+      height: 2px;
+      background-color: white;
+      margin: 3px 0;
+      transition: all 0.3s ease;
+    }
+    
+    .menu {
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: rgba(16, 28, 34, 0.9);
+      border-radius: 8px;
+      padding: 10px 0;
+      width: 200px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+    }
+    
+    .menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .menu a {
+      display: block;
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+      font-family: 'Space Grotesk', sans-serif;
+      transition: background-color 0.3s ease;
+    }
+    
+    .menu a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* When menu is active, transform hamburger to X */
+    .hamburger.active div:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active div:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger.active div:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white antialiased">
+
+<!-- Hamburger Menu -->
+<div class="menu-container">
+    <div class="hamburger" id="hamburger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="menu" id="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="trailer.html">Trailer</a>
+        <a href="sinopsis.html">Sinopsis</a>
+        <a href="fichatecnica.html">Ficha Técnica</a>
+    </div>
+</div>
+
+<div class="flex min-h-screen items-center justify-center p-4">
+<div class="w-full max-w-4xl bg-background-dark/50 dark:bg-background-light/5 backdrop-blur-lg border border-white/10 dark:border-white/5 shadow-2xl rounded-xl overflow-hidden">
+<div class="p-8 md:p-12">
+<header class="mb-8">
+<h1 class="text-4xl md:text-5xl font-orbitron font-bold tracking-wider bg-gradient-to-r from-primary to-white/80 text-transparent bg-clip-text">FICHA TÉCNICA</h1>
+<div class="mt-6 mb-8">
+<h2 class="text-2xl font-orbitron font-bold text-white/90 mb-3">THE ETERNAL WHITE</h2>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">Duración: 48 min</p>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">Género: Sci-Fi / Drama</p>
+</div>
+</header>
+<section class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-6">
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Dirección</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">Christoph Behl</p>
+</div>
+
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Producción Ejecutiva</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">Pablo Robert</p>
+</div>
+
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Coordinador y Jefe de Producción</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">Pablo Granata</p>
+</div>
+
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Elenco</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">
+Paula Brasca<br>
+Cristian Marcelo Salguero<br>
+Rosa Ximena Bordon<br>
+Lautaro Delgado Tymruk<br>
+Nadine Cifre<br>
+Juan Palomino
+</p>
+</div>
+
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Idea Original</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">Christoph Behl, Nicolás Britos</p>
+</div>
+
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Guión</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">
+Diego Salinas Slemenson<br>
+Yordan Alberto Bonne<br>
+Damián Bruno<br>
+Malena Céspedes<br>
+Mariano Samengo
+</p>
+</div>
+</div>
+
+<div class="space-y-6">
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Dirección de Fotografía</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">David Nazareno</p>
+</div>
+
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Montaje</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">Gaston Turjanski</p>
+</div>
+
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Dirección de Arte</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">Emilia Tobia</p>
+</div>
+
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Dirección de Sonido</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">Fernando Ribero</p>
+</div>
+
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Productores Asociados</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">
+Estudio Alasur<br>
+Ricardo Peralta<br>
+Patricia Calderón
+</p>
+</div>
+
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Desarrollo de Proyecto</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">Glenda Rodriguez</p>
+</div>
+
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Casting</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">Laura Andino</p>
+</div>
+
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">VFX</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">Plunk! artes visuales</p>
+</div>
+
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Corrección de color</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">Julieta Dorin</p>
+</div>
+
+<div>
+<h3 class="text-lg font-bold text-primary tracking-widest uppercase mb-3">Música original</h3>
+<p class="text-white/80 dark:text-white/70 leading-relaxed">Alejandro Staro<br>Ezequiel Tarica</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="bg-black/20 dark:bg-black/30 px-8 py-4">
+<div class="flex items-center justify-center">
+<img src="../img/subterranea.png" alt="Subterranea Logo" class="h-8 opacity-70 hover:opacity-100 transition-opacity duration-300" />
+</div>
+</footer>
+</div>
+</div>
+
+
+
+<script>
+    // Hamburger menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger-menu');
+        const menu = document.getElementById('menu');
+        
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+                hamburger.classList.remove('active');
+                menu.classList.remove('active');
+            }
+        });
+    });
+</script>
+</body></html>
